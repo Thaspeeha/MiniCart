@@ -121,6 +121,10 @@ frontend/
 - [ ] Payment integration
 - [ ] Dark mode support
 
+## 📌 Author Notes
+
+This project was built for a learning experience to fully improve and implement complexity in full stack frontend devlopments.
+
 ## License 📝
 
 This project is licensed under the MIT License - see the LICENSE file for details.
