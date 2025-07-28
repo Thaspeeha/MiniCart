@@ -1,4 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import Image from "next/image";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 export interface Product {
   id: string;
@@ -6,6 +15,7 @@ export interface Product {
   description: string;
   price: number;
   image: string;
+  quantity?: number;
 }
 
 interface ProductCardProps {
@@ -14,23 +24,69 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
+  const [quantity, setQuantity] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleAddToCart = async () => {
+    setIsLoading(true);
+    try {
+      if (onAddToCart) onAddToCart({ ...product, quantity });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
-    <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center w-full max-w-xs">
-      <img
-        src={product.image}
-        alt={product.name}
-        className="w-32 h-32 object-cover mb-4 rounded"
-      />
-      <h2 className="text-lg font-semibold mb-2">{product.name}</h2>
-      <p className="text-gray-600 text-sm mb-2 text-center">{product.description}</p>
-      <div className="font-bold text-primary mb-4">${product.price.toFixed(2)}</div>
-      <button
-        className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition"
-        onClick={() => onAddToCart && onAddToCart(product)}
-      >
-        Add to Cart
-      </button>
-    </div>
+    <Card className="w-full max-w-xs">
+      <CardContent className="pt-6 flex flex-col items-center">
+        <Image
+          src={product.image}
+          alt={product.name}
+          width={128}
+          height={128}
+          className="object-cover mb-4 rounded"
+          unoptimized
+        />
+        <h2 className="text-lg font-semibold mb-2">{product.name}</h2>
+        <p className="text-gray-600 text-sm mb-2 text-center">{product.description}</p>
+        <div className="font-bold text-primary mb-4">${product.price.toFixed(2)}</div>
+        <div className="flex items-center gap-2 mb-4">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => setQuantity(Math.max(1, quantity - 1))}
+          >
+            -
+          </Button>
+          <span className="w-8 text-center">{quantity}</span>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={() => setQuantity(quantity + 1)}
+          >
+            +
+          </Button>
+        </div>
+      </CardContent>
+      <CardFooter className="flex justify-center">
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                className="w-full"
+                onClick={handleAddToCart}
+                disabled={isLoading}
+              >
+                {isLoading ? "Adding..." : "Add to Cart"}
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Add {quantity} item{quantity > 1 ? "s" : ""} to cart</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </CardFooter>
+    </Card>
   );
 };
 

@@ -4,20 +4,20 @@
     "name": "Wireless Headphones",
     "description": "High-quality wireless headphones with noise cancellation.",
     "price": 99.99,
-    "image": "/headphones.jpg"
+    "image": "https://placehold.co/400x400/333/FFF?text=Headphones"
   },
   {
     "id": "2",
     "name": "Smart Watch",
     "description": "Track your fitness and notifications with this smart watch.",
     "price": 149.99,
-    "image": "/smartwatch.jpg"
+    "image": "https://placehold.co/400x400/333/FFF?text=SmartWatch"
   },
   {
     "id": "3",
     "name": "Bluetooth Speaker",
     "description": "Portable speaker with deep bass and long battery life.",
     "price": 59.99,
-    "image": "/speaker.jpg"
+    "image": "https://placehold.co/400x400/333/FFF?text=Speaker"
   }
 ] 

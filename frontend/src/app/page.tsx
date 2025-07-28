@@ -30,13 +30,18 @@ export default function Home() {
   if (error) return <div className="text-center mt-10 text-red-500">{error}</div>;
 
   return (
-    <div className="container mx-auto py-8">
-      <h1 className="text-2xl font-bold mb-6 text-center">Products</h1>
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} onAddToCart={handleAddToCart} />
-        ))}
-      </div>
+    <div className="container mx-auto py-8 px-4">
+      <section className="space-y-8">
+        <div className="text-center space-y-2">
+          <h1 className="text-3xl font-bold tracking-tight">Welcome to MiniCart</h1>
+          <p className="text-gray-500">Discover our amazing products</p>
+        </div>
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} onAddToCart={handleAddToCart} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
