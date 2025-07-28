@@ -19,5 +19,40 @@
     "description": "Portable speaker with deep bass and long battery life.",
     "price": 59.99,
     "image": "https://placehold.co/400x400/333/FFF?text=Speaker"
+  },
+  {
+    "id": "4",
+    "name": "Wireless Mouse",
+    "description": "Ergonomic wireless mouse with long battery life.",
+    "price": 29.99,
+    "image": "https://placehold.co/400x400/333/FFF?text=Mouse"
+  },
+  {
+    "id": "5",
+    "name": "Gaming Keyboard",
+    "description": "Mechanical keyboard with RGB lighting and responsive keys.",
+    "price": 89.99,
+    "image": "https://placehold.co/400x400/333/FFF?text=Keyboard"
+  },
+  {
+    "id": "6",
+    "name": "Fitness Tracker",
+    "description": "Track your activity and sleep with this sleek fitness tracker.",
+    "price": 49.99,
+    "image": "https://placehold.co/400x400/333/FFF?text=Tracker"
+  },
+  {
+    "id": "7",
+    "name": "Noise Cancelling Earbuds",
+    "description": "Compact earbuds with active noise cancelling technology.",
+    "price": 79.99,
+    "image": "https://placehold.co/400x400/333/FFF?text=Earbuds"
+  },
+  {
+    "id": "8",
+    "name": "Smart Home Speaker",
+    "description": "Voice-controlled smart home speaker with high fidelity sound.",
+    "price": 129.99,
+    "image": "https://placehold.co/400x400/333/FFF?text=SmartSpeaker"
   }
-] 
+]
