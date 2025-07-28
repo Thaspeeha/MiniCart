@@ -14,6 +14,7 @@ interface CartContextType {
   addToCart: (item: CartItem) => void;
   removeFromCart: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
+  clearCart: () => void;
   subtotal: number;
   tax: number;
   total: number;
@@ -70,6 +71,10 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [removeFromCart]);
 
+  const clearCart = useCallback(() => {
+    setCart([]);
+  }, []);
+
   // Calculate cart totals
   const subtotal = useMemo(() => 
     cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
@@ -86,11 +91,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       addToCart,
       removeFromCart,
       updateQuantity,
+      clearCart,
       subtotal,
       tax,
       total,
     }),
-    [cart, subtotal, tax, total, addToCart, removeFromCart, updateQuantity]
+    [cart, subtotal, tax, total, addToCart, removeFromCart, updateQuantity, clearCart]
   );
 
   return (
