@@ -31,7 +31,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
   const handleAddToCart = async () => {
     setIsLoading(true);
     try {
-      if (onAddToCart) onAddToCart({ ...product, quantity });
+      if (onAddToCart) {
+        const productWithQuantity = { ...product, quantity };
+        onAddToCart(productWithQuantity);
+        setQuantity(1); // Reset quantity after adding to cart
+      }
     } finally {
       setIsLoading(false);
     }

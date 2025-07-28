@@ -2,6 +2,9 @@
 
 import React, { useEffect, useState } from "react";
 import ProductCard, { Product } from "../components/ProductCard";
+import { useCart } from "@/lib/cart-context";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const fetchProducts = async (): Promise<Product[]> => {
   const res = await fetch("/mock-products.json");
@@ -21,9 +24,18 @@ export default function Home() {
       .finally(() => setLoading(false));
   }, []);
 
+  const { addToCart } = useCart();
+  const router = useRouter();
+
   const handleAddToCart = (product: Product) => {
-    // dO: Integrate with cart context
-    alert(`Added ${product.name} to cart!`);
+    addToCart({ ...product, quantity: 1 });
+    toast.success("Added to cart!", {
+      description: `${product.name} has been added to your cart.`,
+      action: {
+        label: "View Cart",
+        onClick: () => router.push("/cart")
+      }
+    });
   };
 
   if (loading) return <div className="text-center mt-10">Loading products...</div>;
