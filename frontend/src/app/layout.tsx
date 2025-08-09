@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import NavBar from "@/components/NavBar";
 import { Providers } from "./providers";
 import "./globals.css";
 
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <NavBar />
+          <main className="min-h-screen bg-background">{children}</main>
+        </Providers>
       </body>
     </html>
   );

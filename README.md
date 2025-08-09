@@ -123,7 +123,7 @@ frontend/
 
 ## 📌 Author Notes
 
-This project was built for a learning experience to fully improve and implement complexity in full stack frontend devlopments.
+This project was built for a learning experience to fully improve and implement complexity in full stack frontend developments.
 
 ## License 📝
 
