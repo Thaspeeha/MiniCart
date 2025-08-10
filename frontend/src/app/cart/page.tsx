@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useCart } from "@/lib/cart-context";
 import { Button } from "@/components/ui/button";
 import CartItem from "@/components/CartItem";
+import { formatCurrency } from "@/lib/utils";
 
 export default function CartPage() {
   const { cart, subtotal, tax, total } = useCart();
@@ -43,16 +44,16 @@ export default function CartPage() {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <span className="text-gray-600">Subtotal</span>
-                <span>${subtotal.toFixed(2)}</span>
+                <span>{formatCurrency(subtotal)}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Tax (10%)</span>
-                <span>${tax.toFixed(2)}</span>
+                <span>{formatCurrency(tax)}</span>
               </div>
               <div className="border-t pt-2 mt-2">
                 <div className="flex justify-between font-bold">
                   <span>Total</span>
-                  <span className="text-primary">${total.toFixed(2)}</span>
+                  <span className="text-primary">{formatCurrency(total)}</span>
                 </div>
               </div>
             </div>
@@ -67,4 +68,4 @@ export default function CartPage() {
       </div>
     </div>
   );
-} 
+}

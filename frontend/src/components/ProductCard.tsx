@@ -9,6 +9,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { formatCurrency } from "@/lib/utils";
 
 export interface Product {
   id: string;
@@ -45,18 +46,21 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
     <Card className="w-full max-w-xs">
       <CardContent className="pt-6 flex flex-col items-center">
         <Link href={`/product/${product.id}`} className="block">
-        <Image
-          src={product.image}
-          alt={product.name}
-          width={128}
-          height={128}
-          className="object-cover mb-4 rounded hover:opacity-90 transition-opacity"
-          
-        />
-        <h2 className="text-lg font-semibold mb-2 hover:text-primary transition-colors">{product.name}</h2>
-      </Link>
-        <p className="text-gray-600 text-sm mb-2 text-center">{product.description}</p>
-        <div className="font-bold text-primary mb-4">${product.price.toFixed(2)}</div>
+          <Image
+            src={product.image}
+            alt={product.name}
+            width={128}
+            height={128}
+            className="object-cover mb-4 rounded hover:opacity-90 transition-opacity"
+          />
+          <h2 className="text-lg font-semibold mb-2 hover:text-primary transition-colors">
+            {product.name}
+          </h2>
+        </Link>
+        <p className="text-gray-600 text-sm mb-2 text-center">
+          {product.description}
+        </p>
+        <p className="text-lg font-semibold">{formatCurrency(product.price)}</p>
         <div className="flex items-center gap-2 mb-4">
           <Button
             variant="outline"
@@ -88,7 +92,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
               </Button>
             </TooltipTrigger>
             <TooltipContent>
-              <p>Add {quantity} item{quantity > 1 ? "s" : ""} to cart</p>
+              <p>
+                Add {quantity} item{quantity > 1 ? "s" : ""} to cart
+              </p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
@@ -97,4 +103,4 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
   );
 };
 
-export default ProductCard; 
+export default ProductCard;

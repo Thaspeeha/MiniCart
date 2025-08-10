@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 import { useCart } from "@/lib/cart-context";
+import { formatCurrency } from "@/lib/utils";
 
 interface CartItemProps {
   id: string;
@@ -39,7 +40,7 @@ const CartItem: React.FC<CartItemProps> = ({ id, name, price, quantity, image })
               {name}
             </h3>
           </Link>
-          <div className="text-gray-600">${price.toFixed(2)}</div>
+          <div className="text-gray-600">{formatCurrency(price)}</div>
 
           <div className="flex items-center gap-3 mt-2">
             <Button
@@ -62,7 +63,7 @@ const CartItem: React.FC<CartItemProps> = ({ id, name, price, quantity, image })
 
         <div className="flex flex-col items-end gap-2">
           <div className="font-semibold text-lg">
-            ${(price * quantity).toFixed(2)}
+            {formatCurrency(price * quantity)}
           </div>
           <Button
             variant="ghost"
@@ -78,4 +79,4 @@ const CartItem: React.FC<CartItemProps> = ({ id, name, price, quantity, image })
   );
 };
 
-export default CartItem; 
+export default CartItem;
