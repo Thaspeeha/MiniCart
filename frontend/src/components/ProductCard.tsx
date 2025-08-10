@@ -51,7 +51,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
           width={128}
           height={128}
           className="object-cover mb-4 rounded hover:opacity-90 transition-opacity"
-          unoptimized
+          
         />
         <h2 className="text-lg font-semibold mb-2 hover:text-primary transition-colors">{product.name}</h2>
       </Link>

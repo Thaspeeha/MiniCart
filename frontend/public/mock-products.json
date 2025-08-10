@@ -4,55 +4,55 @@
     "name": "Wireless Headphones",
     "description": "High-quality wireless headphones with noise cancellation.",
     "price": 99.99,
-    "image": "https://placehold.co/400x400/333/FFF?text=Headphones"
+    "image": "https://images.unsplash.com/photo-1491927570842-0261e477d937?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": "2",
     "name": "Smart Watch",
     "description": "Track your fitness and notifications with this smart watch.",
     "price": 149.99,
-    "image": "https://placehold.co/400x400/333/FFF?text=SmartWatch"
+    "image": "https://images.unsplash.com/photo-1637160151663-a410315e4e75?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": "3",
     "name": "Bluetooth Speaker",
     "description": "Portable speaker with deep bass and long battery life.",
     "price": 59.99,
-    "image": "https://placehold.co/400x400/333/FFF?text=Speaker"
+    "image": "https://images.unsplash.com/photo-1608488458196-61cd3a720de8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": "4",
     "name": "Wireless Mouse",
     "description": "Ergonomic wireless mouse with long battery life.",
     "price": 29.99,
-    "image": "https://placehold.co/400x400/333/FFF?text=Mouse"
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": "5",
     "name": "Gaming Keyboard",
     "description": "Mechanical keyboard with RGB lighting and responsive keys.",
     "price": 89.99,
-    "image": "https://placehold.co/400x400/333/FFF?text=Keyboard"
+    "image": "https://images.unsplash.com/photo-1612600840881-8aba94904ab9?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": "6",
     "name": "Fitness Tracker",
     "description": "Track your activity and sleep with this sleek fitness tracker.",
     "price": 49.99,
-    "image": "https://placehold.co/400x400/333/FFF?text=Tracker"
+    "image": "https://images.unsplash.com/photo-1620213391117-0d169a917221?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": "7",
     "name": "Noise Cancelling Earbuds",
     "description": "Compact earbuds with active noise cancelling technology.",
     "price": 79.99,
-    "image": "https://placehold.co/400x400/333/FFF?text=Earbuds"
+    "image": "https://images.unsplash.com/photo-1733641839465-f9de0c9b9bde?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": "8",
     "name": "Smart Home Speaker",
     "description": "Voice-controlled smart home speaker with high fidelity sound.",
     "price": 129.99,
-    "image": "https://placehold.co/400x400/333/FFF?text=SmartSpeaker"
+    "image": "https://images.unsplash.com/photo-1752955471067-294a5de5bf48?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ]

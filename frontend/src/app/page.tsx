@@ -50,7 +50,7 @@ export default function Home() {
 
       {/* Tagline */}
       <p className="text-center text-lg text-gray-600 mb-8 italic">
-        Discover shopping with our new launched products
+        Discover shopping with our newly launched products
       </p>
 
       {/* Section Title */}
