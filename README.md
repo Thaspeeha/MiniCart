@@ -120,6 +120,8 @@ frontend/
 - [ ] Search functionality
 - [ ] Payment integration
 - [ ] Dark mode support
+- [ ] Product filtering ans sorting
+- [ ] Skeleton loaders
 
 ## 📌 Author Notes
 
