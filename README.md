@@ -129,4 +129,4 @@ This project was built for a learning experience to fully improve and implement 
 
 ## License 📝
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project was developed for educational purposes and is not intended for commercial deployment without further development.
